@@ -1,0 +1,5 @@
+.agents
+.claude
+.playwright-mcp
+node_modules
+.env
