@@ -1,7 +1,7 @@
 import os
 import boto3
 
-def send_email_ses(from_email: str, to_emails: list[str], subject: str, body: str):
+def send_email_ses(from_email: str, to_emails: list[str], subject: str, body: str, reply_to: list[str] | None = None):
   try:
     client = boto3.client(
       'ses',
@@ -15,6 +15,7 @@ def send_email_ses(from_email: str, to_emails: list[str], subject: str, body: st
       Destination={
         'ToAddresses': to_emails
       },
+      ReplyToAddresses=reply_to or [],
       Message={
         'Subject': {
           'Data': subject

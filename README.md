@@ -48,6 +48,7 @@ The format of the final report should have three sections:
 ## SUBSCRIBERS
 
 - tad@cmdlabs.io
+- henry@pedestal.ai
 
 ## REPLY TO
 
